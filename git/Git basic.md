@@ -53,6 +53,15 @@ Changes to be committed:
         new file:   markdown.md
 ```
 
+```bash
+$ git add .
+$ git add a.html
+$ git add b.html c.html
+$ git add blog/
+```
+
+
+
 ## 3. commit
 
 ```bash
