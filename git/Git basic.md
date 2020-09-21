@@ -88,5 +88,48 @@ $ git log --oneline
 $ git log --oneline -1
 ```
 
+## 4. 기타명령어
+
+ ### `restore`
+
+작업공간(working directory)의 변경사항을 버린다.
+
+```bash
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        deleted:    blog.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ git restore blog.html
+```
+
+* `--staged` 옵션을 활용하면, staging area를 취소(add명령어의 반대)
+
+```bash
+$ git restore --staged README.md
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+### 커밋메세지 변경
+
+```bash
+$ git commit --amend
+```
+
+### reset, revert
+
+
+
 
 

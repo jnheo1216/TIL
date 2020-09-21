@@ -1,0 +1,28 @@
+git bash, typora
+
+
+
+git bash : cli 환경
+cli : 명령줄인터페이스(command line interface)
+
+
+
+
+간단한 깃 명령어
+$ touch CLI.txt : CLI.txt라는 파일을 만들어줌
+$ git init : .git 저장소생성(초기화)
+$ git add . : 커밋할 목록에 애드
+$ git commit -m 'First commit' :  커밋
+$ git config --global user.name
+$ git config --global user.name
+$ git config --global -l :  현재 뭐로 등록되있나 보여줌
+$ git log : 버전(이력) 보여줌
+$ git status : 뭐가 바뀌었나 상태 보여줌
+
+
+프로젝트 복제
+code에 가서 주소가져오기
+git clone {url}
+수정하고 나서
+add commit push
+
