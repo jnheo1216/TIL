@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 700px;
+      border: 2px solid lightgray;
+      border-radius: 7px;
+      padding: 18px;
+      margin: auto;
+    }
+    .fp {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    .bottom-line-blue {
+      border-bottom: 2px solid blue;
+    }
+  </style>
+</head>
+<body>
+  
+  <form>
+    <div style="width: 700px; margin: auto;">
+      <h1>SSAFY 전용 GitLab 시스템</h1>
+      <hr> 
+    </div>   
+    <div class="box">
+      <div class="text-center bottom-line-blue">
+        Sign in
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Username or Email</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3 form-check" style="position: relative;">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Remenber me</label>
+        <a class="fp" href="#">Forget Password?</a>
+      </div>
+      <div class="d-grid gap-2">
+        <button class="btn btn-success" type="button">Sign in</button>
+      </div>
+    </div>
+  </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
