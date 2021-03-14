@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="{% url 'movies:update' movie.pk %}" method="POST">
+  {% csrf_token %}
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" name="title" id="title" value="{{ movie.title }}" maxlength=100>
+  </div>
+  <div class="mb-3">
+    <label for="overview" class="form-label">overview</label>
+    <textarea name="overview" id="overview" class="form-control">{{ movie.overview }}</textarea>
+  </div>
+  <div class="mb-3">
+    <label for="poster_path" class="form-label">poster_path</label>
+    <input type="text" class="form-control" name="poster_path" id="poster_path" value="{{ movie.poster_path }}" maxlength=500>
+  </div>
+  <button type="submit" class="btn btn-primary">수정</button>
+</form>
+{% endblock %}
