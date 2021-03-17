@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table">
+  <thead>
+    <h2>모든 게시글 조회</h2>
+    <br>
+    <tr>
+      <th scope="col">No.</th>
+      <th scope="col">제목</th>
+      <th scope="col">내용</th>
+      <th scope="col">작성시간</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for article in articles %}
+    <tr>
+      <th scope="row">{{ article.pk }}</th>
+      <td><a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a></td>
+      <td>{{ article.content }}</td>
+      <td>{{ article.create_at }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
