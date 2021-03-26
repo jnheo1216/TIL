@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{{ review.title }}</h2>
+    <h4>영화 제목 : {{ review.movie_title }}</h4>
+    <br>
+    <br>
+    <p>{{ review.content }}</p>
+    <p>점수 : {{ review.rank }}</p>
+    <br>
+    <br>
+    <p>작성시간 : {{ review.created_at}}</p>
+    <p>수정시간 : {{ review.updated_at}}</p>
+
+    <hr>
+
+    {% for comment in review.comment_set.all %}
+        <p>{{ comment.content }}</p>
+    {% endfor %}
+    <hr>
+    {% if user.is_authenticated %}
+        <form action="{% url 'community:comments_create' review.pk %}" method="POST">
+            {% csrf_token %}
+            {{comment_form.as_p }}
+                <button class='btn btn-primary'>세글쓰기</button>
+        </form>
+    {% else %}
+        <p><a href="{% url 'accounts:login' %}">댓글을 쓰려면 로그인하세요</a></p>
+    {% endif %}
+
+{% endblock content %}

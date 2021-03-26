@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container" style="width: 40rem;">
+        <h2>로그인</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class='btn btn-primary'>로그인</button>
+        </form>
+        <hr>
+        <p><a href="{% url 'accounts:signup' %}">no id?</a></p>
+    </div>
+{% endblock content %}
